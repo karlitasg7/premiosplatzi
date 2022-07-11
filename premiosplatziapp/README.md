@@ -1,5 +1,11 @@
 ## Commands used in the project
 
+# install django
+pip install django
+
+# start a project
+django-admin startproject premiosplatziapp
+
 # create app
 py manage.py startapp polls	
 
@@ -20,7 +26,8 @@ os.system("clear")
 ## Querys
 
 # gest all questions
- Question.objects.all()
+from polls.models import Question, Choice
+Question.objects.all()
  
 # create questions
 q = Question(question_text="Cual es el mejor curso de Platzi?", pub_date=timezone.now())
